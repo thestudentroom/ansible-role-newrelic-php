@@ -21,8 +21,8 @@
 - name: Configure New Relic Agent
   template:
     src: newrelic.ini.j2
-    dest: /etc/php5/apache2/conf.d
-    group: newrelic
+    dest: /etc/php5/apache2/conf.d/newrelic.ini
+    group: root
     owner: root
     mode: 0644
   notify:

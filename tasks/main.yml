@@ -17,6 +17,11 @@
   command: newrelic-install install
   environment:
     NR_INSTALL_SILENT: true
+    
+- name: Remove default newrelic.ini
+  file:
+    path: /etc/php5/apache2/conf.d/newrelic.ini
+    state: absent
 
 - name: Configure New Relic Agent
   template:
